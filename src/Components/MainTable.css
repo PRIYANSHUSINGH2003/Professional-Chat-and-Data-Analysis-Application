@@ -1,0 +1,155 @@
+.main-table-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-table th, .main-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-table th {
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #121212;
+}
+
+.main-table th:hover {
+    background-color: #e0e0e0;
+}
+
+.main-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.details-table-container {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details-table th, .details-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    margin: 0 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls button:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode .main-table th {
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #121212;
+}
+
+.dark-mode .main-table th:hover {
+    background-color: #000000;
+    color: #ddd;
+}
+
+.dark-mode .main-table tbody tr:hover {
+    background-color: #000000;
+}
+
+.dark-mode .main-table-container{
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .main-table-container h1{
+    color: #ffffff;
+}
+
+.dark-mode .main-table-container .main-table{
+    background-color: #121212;
+    color: #ffffff;
+    box-shadow: 0 2px 10px rgb(0, 0, 0);
+}
+
+.dark-mode .main-table-container .main-table thead tr{
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.back-button {
+    background-color: #00a1e4; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 26px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+    display: inline-block; /* Allows margin and positioning */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.back-button:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add focus effect */
+}
+
+
+@media (max-width: 768px) {
+    .main-table th, .main-table td {
+        padding: 8px 10px;
+    }
+
+    .pagination-controls button {
+        padding: 6px 10px;
+    }
+}
+
+
+.loading-message,
+.error-message{
+    text-align: center;
+    font-size: 18px;
+    color: #888; /* Lighter color for non-critical messages */
+    padding: 20px;
+}

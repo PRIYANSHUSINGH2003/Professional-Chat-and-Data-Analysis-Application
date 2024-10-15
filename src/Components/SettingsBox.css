@@ -1,0 +1,116 @@
+/* SettingsBox.css */
+
+/* Overlay background */
+.settings-box-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+}
+
+/* Settings box container */
+.settings-box {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Gradient background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out; /* Smooth appearance animation */
+    
+}
+
+.Box-Shawdow{
+    padding: 20px;
+    margin: 1.8rem 0rem 1.2rem 0rem;
+    border-radius: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section */
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.settings-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* App version text */
+.app-version {
+    margin-right: 2rem;
+    font-size: 13px;
+    color: #888;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #333; /* Darker on hover */
+}
+
+/* Settings content */
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Developer links */
+.settings-content p {
+    margin: 0;
+    font-size: 15px;
+    color: #444;
+}
+
+.settings-content p strong {
+    color: #333;
+}
+
+/* Links */
+.settings-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.settings-link:hover {
+    color: #0056b3;
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Animation for appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,239 @@
+/* Sidebar container */
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Sidebar open/close transition */
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+/* Sidebar header */
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Toggle sidebar button */
+.toggle-sidebar-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Sidebar title */
+.sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Settings button */
+.settings-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.settings-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Chat list */
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Chat item */
+.chat-item {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.chat-item:hover {
+    background-color: #ddd;
+}
+
+/* Add chat button */
+.add-chat-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.add-chat-button svg {
+    margin-right: 5px;
+}
+
+/* Update dataset section */
+.update-dataset-url {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Update dataset URL input */
+.update-dataset-url input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+/* Update dataset URL button */
+.update-dataset-url button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.update-dataset-url button:hover {
+    background-color: #0056b3;
+}
+
+/* Delete dataset button */
+.delete-dataset-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-dataset-button:hover {
+    background-color: #c82333;
+}
+
+/* Add dataset button */
+.add-dataset-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-dataset-button:hover {
+    background-color: #218838;
+}
+
+/* Dark mode styles */
+.dark-mode .sidebar {
+    background-color: #1f1f1f;
+    border-right: 1px solid #333;
+}
+
+.dark-mode .sidebar-title{
+    color: #fff;
+}
+
+.dark-mode .chat-item {
+    color: #e0e0e0;
+}
+
+.dark-mode .settings-button {
+    color: #e0e0e0;
+}
+
+.dark-mode .update-dataset-url {
+    background-color: #2c2c2c;
+    border-top: 1px solid #444;
+}
+
+.dark-mode .update-dataset-url input {
+    border: 1px solid #444;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+.dark-mode .update-dataset-url button,
+.dark-mode .delete-dataset-button,
+.dark-mode .add-dataset-button {
+    background-color: #007bff;
+}
+
+.dark-mode .update-dataset-url button:hover,
+.dark-mode .delete-dataset-button:hover,
+.dark-mode .add-dataset-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .update-dataset-url {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .update-dataset-url input,
+    .update-dataset-url button {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .update-dataset-url button {
+        width: 100%;
+    }
+}

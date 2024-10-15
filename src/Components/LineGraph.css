@@ -1,0 +1,32 @@
+.line-graph-container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.line-graph {
+    height: 400px; /* Set a height for the graph */
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Darker text for readability */
+    margin-bottom: 20px;
+}
+
+.loading-message,
+.error-message,
+.under-construction {
+    text-align: center;
+    font-size: 18px;
+    color: #888; /* Lighter color for non-critical messages */
+    padding: 20px;
+}
+
+.under-construction {
+    font-weight: bold;
+    color: #d9534f; /* Bootstrap's danger color for attention */
+}
+
